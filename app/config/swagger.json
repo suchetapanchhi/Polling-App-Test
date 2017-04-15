@@ -2,16 +2,16 @@
     "swagger": "2.0",
     "info": {
         "version": "v1",
-        "title": "Contact List",
-        "description": "A Contact list API based on Swagger and built using Node.js"
+        "title": "Poll App",
+        "description": "APIs for Poll App based on Swagger and built using Node.js"
     },
     "paths": {
-        "/contacts": {
+        "/users": {
             "get": {
                 "tags": [
-                    "Contacts"
+                    "Users"
                 ],
-                "operationId": "contacts_get",
+                "operationId": "users_get",
                 "consumes": [],
                 "produces": [
                     "application/json",
@@ -23,7 +23,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/Contact"
+                                "$ref": "#/definitions/Users"
                             }
                         }
                     }
@@ -31,12 +31,12 @@
                 "deprecated": false
             }
         },
-        "/contacts/{id}": {
+        "/users/{id}": {
             "get": {
                 "tags": [
-                    "Contacts"
+                    "Users"
                 ],
-                "operationId": "contacts_getById",
+                "operationId": "users_getById",
                 "consumes": [],
                 "produces": [
                     "application/json",
@@ -57,7 +57,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/Contact"
+                                "$ref": "#/definitions/Users"
                             }
                         }
                     }
@@ -67,7 +67,7 @@
         }
     },
     "definitions": {
-        "Contact": {
+        "Users": {
             "type": "object",
             "properties": {
                 "id": {

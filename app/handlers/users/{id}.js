@@ -1,9 +1,9 @@
 'use strict';
 
- var repository = require('../../lib/contactRepository');
+ var repository = require('../../lib/usersRepository');
 
  module.exports = {
-     get: function contacts_get(req, res) {
+     get: function users_get(req, res) {
          res.json(repository.get(req.params['id']));
      }    
  };

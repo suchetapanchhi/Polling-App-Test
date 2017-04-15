@@ -1,13 +1,13 @@
 'use strict';
 
-var contacts = require('./contacts.json');
+var users = require('./usersInfo.json');
 var jp = require('jsonpath')
 
 module.exports = {
     get: function (id) {
-        return jp.query(contacts, '$..[?(@.id=='+id+')]');
+        return jp.query(users, '$..[?(@.id=='+id+')]');
     },
     all: function () {
-        return contacts;
+        return users;
     }
 };
